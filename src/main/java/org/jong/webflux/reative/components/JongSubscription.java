@@ -1,6 +1,5 @@
-package org.jong.webflux.reative.compoents;
+package org.jong.webflux.reative.components;
 
-import org.reactivestreams.Publisher;
 import org.reactivestreams.Subscriber;
 import org.reactivestreams.Subscription;
 

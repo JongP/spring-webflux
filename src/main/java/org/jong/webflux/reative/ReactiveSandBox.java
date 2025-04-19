@@ -1,9 +1,8 @@
 package org.jong.webflux.reative;
 
 import org.jong.webflux.SandBox;
-import org.jong.webflux.reative.compoents.JongPublisher;
-import org.jong.webflux.reative.compoents.JongSubsciber;
-import org.reactivestreams.Publisher;
+import org.jong.webflux.reative.components.JongPublisher;
+import org.jong.webflux.reative.components.JongSubsciber;
 import org.reactivestreams.Subscriber;
 import org.springframework.stereotype.Component;
 

@@ -4,7 +4,7 @@ plugins {
     id 'io.spring.dependency-management' version '1.1.0'
 }
 
-group = 'org.jong'
+group = 'org.jong.webflux'
 version = '1.0-SNAPSHOT'
 
 repositories {
@@ -16,7 +16,7 @@ dependencies {
     implementation 'io.projectreactor:reactor-test'
 
     //lombok
-    implementation 'org.projectlombok:lombok'
+    compileOnly 'org.projectlombok:lombok'
     annotationProcessor 'org.projectlombok:lombok'
 
     testImplementation platform('org.junit:junit-bom:5.9.1')

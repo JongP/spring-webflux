@@ -1,13 +1,10 @@
-package org.jong.webflux.reative.compoents;
+package org.jong.webflux.reative.components;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 import org.reactivestreams.Publisher;
 import org.reactivestreams.Subscriber;
-import org.reactivestreams.Subscription;
 
 public class JongPublisher<T> implements Publisher<T> {
     private final List<JongSubscription<T>> subscriptions = new ArrayList<>();
