@@ -3,11 +3,10 @@ package org.jong.webflux.reactor;
 import org.jong.webflux.SandBox;
 import org.springframework.stereotype.Component;
 
-import jakarta.annotation.PostConstruct;
 import reactor.core.publisher.Mono;
 
 @Component
-public class ReactorSandBox implements SandBox {
+public class SimpleMonoCombination implements SandBox {
 
 
 
