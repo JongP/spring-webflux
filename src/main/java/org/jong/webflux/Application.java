@@ -12,7 +12,7 @@ public class Application {
     public static void main(String[] arg){
         ApplicationContext applicationContext = SpringApplication.run(Application.class, arg);
 
-        SandBox reactorSandBox = applicationContext.getBean(ReactiveSandBox.class);
+        SandBox reactorSandBox = applicationContext.getBean(ReactorSandBox.class);
         reactorSandBox.start();
 
     }
