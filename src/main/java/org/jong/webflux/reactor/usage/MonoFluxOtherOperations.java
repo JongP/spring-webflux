@@ -11,7 +11,11 @@ import reactor.core.publisher.Mono;
 public class MonoFluxOtherOperations implements SandBox {
     @Override
     public void start() {
+        Mono<User> mono = Mono.just(User.JESSE);
+        User user = mono.block();
 
+        Flux<User> users = Flux.just(User.JESSE);
+        Iterable<User> userIterable = users.toIterable();
     }
 
     // TODO Create a Flux of user from Flux of username, firstname and lastname.

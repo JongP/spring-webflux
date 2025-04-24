@@ -12,8 +12,8 @@ public class Application {
     public static void main(String[] arg){
         ApplicationContext applicationContext = SpringApplication.run(Application.class, arg);
 
-        SandBox reactorSandBox = applicationContext.getBean(MonoFluxErrorHandling.class);
-        reactorSandBox.start();
+        //SandBox reactorSandBox = applicationContext.getBean(MonoFluxErrorHandling.class);
+        //reactorSandBox.start();
 
     }
 }
