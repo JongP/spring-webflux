@@ -1,5 +1,6 @@
 package org.jong.webflux.configuration;
 
+import org.jong.webflux.filter.JongHandlerFilter;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.MediaType;
@@ -12,11 +13,17 @@ import lombok.RequiredArgsConstructor;
 import reactor.core.publisher.Mono;
 
 @Configuration
+@RequiredArgsConstructor
 public class RouteConfiguration {
+
+    private final JongHandlerFilter jongHandlerFilter;
+
     @Bean
     public RouterFunction<ServerResponse> jongRouteLocator() {
         return RouterFunctions.route()
-                              .GET("/api/router/{id}", this::handler).build();
+                              .GET("/api/router/{id}", this::handler)
+                              .filter(jongHandlerFilter)
+                              .build();
     }
 
     private Mono<ServerResponse> handler(ServerRequest serverRequest){
