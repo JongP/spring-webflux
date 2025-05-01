@@ -23,8 +23,17 @@ public class RouteConfiguration {
         return RouterFunctions.route()
                               .GET("/api/router/{id}", this::handler)
                               .filter(jongHandlerFilter)
+                              .GET("/api/router-sub/{id}", this::handler)
                               .build();
     }
+
+    @Bean
+    public RouterFunction<ServerResponse> jongRouteLocator2() {
+        return RouterFunctions.route()
+                              .GET("/api/router2/{id}", this::handler)
+                              .build();
+    }
+
 
     private Mono<ServerResponse> handler(ServerRequest serverRequest){
         Long id = Long.parseLong(serverRequest.pathVariable("id"));
